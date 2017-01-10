@@ -1,0 +1,19 @@
+<launch>
+	<arg name="marker_size" default="8" />
+	<arg name="max_new_marker_error" default="0.08" />
+	<arg name="max_track_error" default="0.0" />
+
+	<arg name="cam_image_topic" default="/camera/depth_registered/points" />
+	<arg name="cam_info_topic" default="/camera/rgb/camera_info" />	
+
+	<arg name="output_frame" default="/camera_link" />
+	<arg name="med_filt_size" default="10" />
+	<arg name="bundle_files" default="$(find ar_tracker)/bundles/MarkerData_1_2_3_4.xml" />
+
+        <node pkg="tf" type="static_transform_publisher" name="grasp_ar_body" args="0 0.12 0.08 -3.141592654 1.570796325 0 ar_marker_1 grasp_frame_body 100" />
+
+        <node pkg="tf" type="static_transform_publisher" name="grasp_ar_top" args="0.12 0 0.02 -3.141592654 1.570796325 1.570796325 ar_marker_0 grasp_frame_top 100" />
+
+
+	<node name="ar_track_alvar" pkg="ar_track_alvar" type="findMarkerBundles" respawn="false" output="screen" args="$(arg marker_size) $(arg max_new_marker_error) $(arg max_track_error) $(arg cam_image_topic) $(arg cam_info_topic) $(arg output_frame) $(arg med_filt_size) $(arg bundle_files)" />
+</launch>

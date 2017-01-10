@@ -1,0 +1,8 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: aimm_description
+    relative_path: urdf/aimm.xacro
+  SRDF:
+    relative_path: config/aimm.srdf
+  CONFIG:
+    generated_timestamp: 1467252737

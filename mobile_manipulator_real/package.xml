@@ -1,0 +1,29 @@
+<package>
+  <name>mobile_manipulator_real</name>
+  <version>0.0.1</version>
+  <description>
+      description, control utilities for mobile manipulator.
+  </description>
+
+  <maintainer email="daveying@163.com">Dave Da</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">https://github.com/daveying/mobile_manipulator_real</url>
+
+  <author email="daveying@163.com">Dave Da</author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>aimm_moveit_config</run_depend>
+  <run_depend>ar_tracker</run_depend>
+  <run_depend>aimm_description</run_depend>
+  <run_depend>hks_gripper</run_depend>
+  <run_depend>ur5_jacobian</run_depend>
+  <run_depend>ur_ctrl</run_depend>
+
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

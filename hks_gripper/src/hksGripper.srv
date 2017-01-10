@@ -1,0 +1,4 @@
+int64 position
+---
+#status, 1 for succeed, -1 for fail
+int64 status
