@@ -21,6 +21,11 @@
   <run_depend>hks_gripper</run_depend>
   <run_depend>ur5_jacobian</run_depend>
   <run_depend>ur_ctrl</run_depend>
+  <run_depend>read_mouse_pos</run_depend>
+  <run_depend>scan_tools</run_depend>
+  <run_depend>universal_robot</run_depend>
+  <run_depend>ur_modern_driver</run_depend>
+  <run_depend>vision_visp</run_depend>
 
 
   <export>
