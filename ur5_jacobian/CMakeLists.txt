@@ -334,6 +334,18 @@ include_directories(
  target_link_libraries(yaskawa_demo
    ${catkin_LIBRARIES}
  )
+ 
+## Declare a C++ executable
+ add_executable(move_mb src/move_mb.cpp)
+
+## Add cmake target dependencies of the executable
+## same as for the library above
+ add_dependencies(move_mb ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+## Specify libraries to link a library or executable target against
+ target_link_libraries(move_mb
+   ${catkin_LIBRARIES}
+ )
 #############
 ## Install ##
 #############
